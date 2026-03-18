@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Reveal</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Datatype', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black h-screen w-screen flex justify-center items-center">
+    <div class="flex-1 justify-center items-center">
+        <h1 class="text-7xl font-semibold text-center text-white py-5">
+            Homecoming 2026 Tech Captain Committee
+        </h1>
+        <h3 class="text-3xl font-light text-center text-white py-2">
+            Name: Abhi Nukala
+        </h3>
+        <h3 class="text-3xl font-light text-white py-2 flex justify-center items-baseline">
+            <span>Position:</span>
+            <span class="relative inline-block text-transparent cursor-pointer overflow-hidden ml-2" onclick="revealText(this)">
+                <span class="absolute inset-0 bg-yellow-400 transition-transform duration-500 transform translate-x-0"></span>
+                <span class="text-yellow-400">Project Developer</span>
+            </span>
+        </h3>
+
+    <script>
+    function revealText(el) {
+        const mask = el.querySelector('span');
+        mask.classList.add('translate-x-full');
+        el.classList.remove('text-transparent');
+    }
+    </script>
+    </div>
+</body>
+</html>
